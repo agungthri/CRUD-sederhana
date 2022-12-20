@@ -2,13 +2,23 @@ from . import Operasi
 
 def delete_console():
     read_console()
-    index = int(input("Masukkan Indeks Yang Akan Dihapus : "))
+    while True:
+        try:
+            index = int(input("Masukkan Indeks Yang Akan Dihapus : "))
+            break
+        except:
+            print("Masukkan Angka")
     Operasi.delete(index)
     read_console()
 
 def update_console():
     read_console()
-    index = int(input("Masukkan Indeks Yang Akan DiUpdate : "))
+    while True:
+        try:
+            index = int(input("Masukkan Indeks Yang Akan DiUpdate : "))
+            break
+        except:
+            print("Masukkan Angka")
     Operasi.update(index)
     read_console()
 
